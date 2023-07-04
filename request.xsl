@@ -46,7 +46,7 @@
     <xsl:param name="authorization" />
     <Request>
       <xsl:choose>
-        <xsl:when test="not($id=null)">
+        <xsl:when test="$id">
           <xsl:attribute name="id" select="$id" />
         </xsl:when>
         <xsl:otherwise>
