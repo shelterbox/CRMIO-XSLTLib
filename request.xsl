@@ -64,7 +64,7 @@
           <xsl:choose>
             <xsl:when test="$escapebody = 'true'">
               <xsl:text disable-output-escaping="yes">&lt;![CDATA[</xsl:text>
-              <xsl:value-of select="$body" />
+              <xsl:copy-of select="$body" />
               <xsl:text disable-output-escaping="yes">]]&gt;</xsl:text>
             </xsl:when>
             <xsl:otherwise>
