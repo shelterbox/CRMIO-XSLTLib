@@ -8,6 +8,6 @@
       <xsl:copy-of select="@*|node()"/>
       <xsl:copy-of select="$element"/>
     </xsl:copy>
-    </xsl:template>
+  </xsl:template>
   
 </xsl:stylesheet>
