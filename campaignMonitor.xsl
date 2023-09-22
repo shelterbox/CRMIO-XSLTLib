@@ -3,6 +3,7 @@
   <xsl:template name="cm_sentcampaigns">
     <xsl:param name="authorization"/>
     <xsl:param name="clientId"/>
+    <xsl:param name="id"/>
     <xsl:param name="sentFromDate"/>
     <xsl:param name="sentToDate"/>
     <xsl:param name="tags"/>
@@ -27,6 +28,7 @@
       <xsl:with-param name="contentType">text/xml</xsl:with-param>
       <xsl:with-param name="authorization" select="$authorization"/>
       <xsl:with-param name="escapebody">false</xsl:with-param>
+      <xsl:with-param name="id" select="$id"/>
     </xsl:call-template>
   </xsl:template>
   
