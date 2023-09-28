@@ -5,6 +5,7 @@
   <xsl:template match="/">
     <xsl:copy>
       <xsl:comment>The stylesheet request.xsl is deprecated. Please use http.xsl instead.</xsl:comment>
+      
       <xsl:apply-templates select="@*|node()"/>
     </xsl:copy>
   </xsl:template>
