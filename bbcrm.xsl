@@ -24,8 +24,8 @@
 			</soap:Body>
 		</soap:Envelope>
 	</xsl:template>
-
-	<xsl:template name="DataListLoadRequestResponseCategoryList">
+	
+	<xsl:template name="DataListLoadRequestResponseList">
 		<xsl:param name="Database">79599s</xsl:param>
 		<xsl:param name="ClientAppName">CRM-IO</xsl:param>
 		<xsl:param name="ContextRecordID">e621e6c3-5500-4865-bf41-93145f238795</xsl:param>
