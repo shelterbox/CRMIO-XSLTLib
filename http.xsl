@@ -5,7 +5,7 @@
     <xsl:param name="uri" />
     <xsl:param name="body" select="null" />
     <xsl:param name="escapebody">true</xsl:param>
-    <xsl:param name="contentType">application/xml<xsl:param>
+    <xsl:param name="contentType">application/xml</xsl:param>
     <xsl:param name="authorization" />
     <xsl:call-template name="httpRequest">
       <xsl:with-param name="id" select="$id" />
