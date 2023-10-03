@@ -63,7 +63,7 @@
       <Content>
         <xsl:if test="not(method='TRACE') and not($body=null)">
           <xsl:choose>
-            <xsl:when test="$escapebody = 'true'">
+            <xsl:when test="$escapebody = 'true' or $escapebody = true">
               <xsl:text disable-output-escaping="yes">&lt;![CDATA[</xsl:text>
               <xsl:copy-of select="$body" />
               <xsl:text disable-output-escaping="yes">]]&gt;</xsl:text>
