@@ -14,6 +14,7 @@
         <xsl:copy-of select="$body"/>
       </soap:Body>
     </soap:Envelope>
+    </xsl:call-template>
   </xsl:template>
   
 </xsl:stylesheet>
