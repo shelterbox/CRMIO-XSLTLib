@@ -4,6 +4,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
 	xmlns:blac="Blackbaud.AppFx.WebService.API.1" xmlns:bb="bb_appfx_dataforms" 
 	exclude-result-prefixes="#all" version="3.0">
+	<xsl:import href="https://github.com/shelterbox/CRMIO-XSLTLib/raw/main/http.xsl"/>
 	
 	<xsl:template name="DataListLoadRequest" xmlns:blac="Blackbaud.AppFx.WebService.API.1">
 		<xsl:param name="id"/>

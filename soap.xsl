@@ -3,17 +3,23 @@
   <xsl:import href="https://github.com/shelterbox/CRMIO-XSLTLib/raw/main/http.xsl"/>
   
   <xsl:template name="soapRequest">
+    <xsl:param name="id" select="null" />
+    <xsl:param name="request"/>
+    <xsl:param name="uri" />
+    <xsl:param name="authorization" />
     <xsl:call-template name="httpPost">
-    <xsl:param name="header"/>
-    <xsl:param name="body"/>
-    <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
-      <soap:Header>
-        <xsl:copy-of select="$header"/>
-      </soap:Header>
-      <soap:Body>
-        <xsl:copy-of select="$body"/>
-      </soap:Body>
-    </soap:Envelope>
+      <xsl:with-param name="id" select="$id" />
+      <xsl:with-param name="uri" select="$uri"/>
+      <xsl:with-param name="authorization" select="$authorization" />
+      <xsl:with-param name="contentType">application/soap+xml;charset=UTF-8</xsl:with-param>
+      <xsl:with-param name="body">
+        <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope">
+          <soap:Header/>
+          <soap:Body>
+            <xsl:copy-of select="$request"/>
+          </soap:Body>
+        </soap:Envelope>
+      </xsl:with-param>
     </xsl:call-template>
   </xsl:template>
   
